@@ -67,6 +67,12 @@ h1 {
   margin-bottom: 15px;
 }
 
+h2 {
+  color: #1e3a8a;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
 .sub-text {
   font-size: 18px;
   text-align: center;
@@ -146,7 +152,7 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-   transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .submit-btn:hover {
@@ -156,6 +162,7 @@ h1 {
 </style>
 </head>
 <body>
+
 <nav>
 <a href="Simple Non AI chatbot.html">Home</a>
 <a href="chatbot about.html">Try chatbot</a>
@@ -176,16 +183,22 @@ h1 {
 
   <!-- ONLINE FEEDBACK BOX -->
   <h2>Send a Quick Message</h2>
-  <form class="feedback-form" action="mailto:dhruvansh222024134@davjaipur.com" method="post" enctype="text/plain">
+  
+  <!-- Form triggers reliable browser submission redirect pipeline -->
+  <form class="feedback-form" action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- Your specific Web3Forms communication access key tracking data -->
+    <input type="hidden" name="access_key" value="a9d11041-7919-44d1-b9d5-5a8aa55fe567">
     
     <div class="form-group">
       <label for="name">Your Name:</label>
-      <input type="text" id="name" name="Name" placeholder="Enter your name here" required>
+      <!-- Added strict name tags for secure processing -->
+      <input type="text" id="name" name="Visitor Name" placeholder="Enter your name here" required>
     </div>
 
     <div class="form-group">
       <label for="msg">Suggestions or Feedback:</label>
-      <textarea id="msg" name="Message" rows="5" placeholder="Type your ideas or message here..." required></textarea>
+      <textarea id="msg" name="Feedback Message" rows="5" placeholder="Type your ideas or message here..." required></textarea>
     </div>
 
     <button type="submit" class="submit-btn">Submit Feedback ➔</button>
